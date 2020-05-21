@@ -10,6 +10,7 @@ public class coin : MonoBehaviour
         Debug.Log(other.name);
         if(other.name == "player"){
         Instantiate(soundOb,transform.position,Quaternion.identity);
+        GameManager.instance.GetScore(-1);
         Destroy(gameObject);
         }
     }
